@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>ejs page</title>
+  <link rel="stylesheet" href="style/styles.css">
+</head>
+
+<body>
+
+  <div class="box" id="heading">
+    <h1> <%= daytitle %> </h1>
+  </div>
+
+  <!-- possibilty of an override every time the code is run -->
+  <div class="box">
+    <%  for(var i =0 ; i<newlistitems.length ;i++){    %>
+    <div class="item">
+      <input type="checkbox" class="checkbox">
+      <p><%= newlistitems[i] %></p>
+    </div>
+
+    <%    }   %>
+
+
+
+    <form action="/" method="post">
+      <input type="text" name="list" placeholder="next-item" autocomplete="off">
+      <button type="submit" name="submit" value=<%= daytitle %>>+</button>
+    </form>
+
+  </div>
+
+</body>
+
+</html>
